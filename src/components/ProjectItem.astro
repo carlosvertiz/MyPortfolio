@@ -1,0 +1,22 @@
+---
+interface Props {
+  imagen: string,
+	url: string;
+  title: string;
+  technologies: Array<string>;
+}
+
+const { imagen, url, title, technologies } = Astro.props;
+---
+
+
+<a class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]" href={url} target="_blank">
+  <img src = {imagen} alt = `${title} imagen`/>
+  <h4>{title}</h4>
+  <div>
+    {technologies.map(technology =>
+    <{technology} />
+      
+    )}
+  </div>
+</a>

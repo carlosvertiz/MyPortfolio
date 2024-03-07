@@ -1,0 +1,46 @@
+---
+import EducationItem from "./EducationItem.astro"
+
+const educations = [
+  {
+    title:"Materials Engineer",
+    place:"National University of Litoral",
+    dateInt:"2016",
+    dateEnd:"2021",
+  },
+  {
+    title:"Scrum course",
+    place: "National Techonological University",
+    dateInt: "2023",
+    dateEnd: "",
+  },
+  {
+    title:"Google Advencaed Data Analytics Professional Certificate",
+    place: "Coursera",
+    dateInt: "2023",
+    dateEnd: "",
+  },
+  {
+    title: "Python course",
+    place: "National University of San Martin",
+    dateInt: "2020",
+    dateEnd: "",
+
+  },
+  ]
+
+
+---
+
+<section class="flex flex-col gap-5 mx-5 mt-10 ">
+  <h2 class="bg-gray-950 p-3 rounded-2xl text-center">Education</h2>
+  {educations.map(education =>
+    <EducationItem
+    title={education.title}
+    place={education.place}
+    dateInt={education.dateInt}
+    dateEnd={education.dateEnd}
+  />
+  )}
+
+</section>

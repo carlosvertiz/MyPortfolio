@@ -1,0 +1,40 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+
+import AstroIcon from "../svg/AstroIcon.astro";
+import CSSIcon from "../svg/CSSIcon.astro";
+import JavaScriptIcon from "../svg/JavaScriptIcon.astro";
+import NodeIcon from "../svg/NodeIcon.astro";
+import PythonIcon from "../svg/PythonIcon.astro";
+import ReactIcon from '../svg/ReactIcon.svg'
+
+
+const projects = [
+  {
+    imagen:,
+    url:,
+    title:,
+    technologies:,
+  },
+  {
+    imagen:,
+    url:,
+    title:,
+    technologies:,
+  },
+]
+
+---
+
+
+
+<section>
+  {projects.map(project =>
+  < ProjectItem 
+    imagen = {project.imagen}
+    url = {project.url}
+    title = {project.title}
+    technologies = {project.technologies}
+  />
+  )}
+</section>

@@ -1,0 +1,16 @@
+---
+interface Props {
+	title: string;
+  place: string;
+  dateInt: string;
+  dateEnd: string;
+}
+
+const { title, place, dateInt, dateEnd } = Astro.props;
+---
+
+
+<article class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]">
+  <h3>{title}</h3>
+  <h4>{place} | {dateInt} {dateEnd? `- ${dateEnd}` : ""}</h4>
+</article>
