@@ -1,0 +1,48 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experiences = [
+  {
+    title:"Product engineer",
+    company:"MECPARTS",
+    dateInt:"1/2022",
+    dateEnd:"12/2023",
+    tasks:["Development, design, improvement, and modification of products.",
+          "Program development and data analysis.",
+          "Development and design of tools and die for aluminum casting."]
+  },
+  {
+    title: "Economic feasibility study - Intern",
+    company: "Polo Tecnologico Constituyente S.A",
+    dateInt: "01/2021",
+    dateEnd: "04/2021",
+    tasks:["Data acquisition, storage and analysis",
+          "Canvas Business Model"]
+  },
+  {
+    title:"Extracurricular Practise",
+    company: "Instituto de fisica del Litorial",
+    dateInt: "01/2019",
+    dateEnd: "01/2020",
+    tasks:["Application development using Python, C++ and TCL",
+          "Molecular dynamic simulations"]
+  }
+  ]
+
+
+---
+
+<section class="flex flex-col gap-5 mx-5 mt-20 ">
+  <h2>Experience</h2>
+  {experiences.map(experience =>
+    <ExperienceItem
+    title={experience.title}
+    company={experience.company}
+    dateInt={experience.dateInt}
+    dateEnd={experience.dateEnd}
+    tasks={experience.tasks}
+  />
+  
+  )}
+
+</section>
