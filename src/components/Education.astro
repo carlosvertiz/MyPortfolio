@@ -1,41 +1,20 @@
 ---
 import EducationItem from "./EducationItem.astro"
-const {id} = Astro.props
+const {id, data, section} = Astro.props
+const educations = data.educations
 
-const educations = [
-  {
-    title:"Materials Engineer",
-    place:"National University of Litoral",
-    dateInt:"2016",
-    dateEnd:"2021",
-  },
-  {
-    title:"Scrum course",
-    place: "National Techonological University",
-    dateInt: "2023",
-    dateEnd: "",
-  },
-  {
-    title:"Google Advanced Data Analytics Professional Certificate",
-    place: "Coursera",
-    dateInt: "2023",
-    dateEnd: "",
-  },
-  {
-    title: "Python course",
-    place: "National University of San Martin",
-    dateInt: "2020",
-    dateEnd: "",
-  },
-]
-
-
+interface Education {
+  title: string;
+  place: string;
+  dateInt: string; 
+  dateEnd: string; 
+}
 ---
 
 <section id={id} class="flex flex-col mx-5 items-center gap-5 mt-10 mb-10 max-w-screen-2xl sm:items-start scroll-mt-20">
-  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">Education</h2>
+  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">{section}</h2>
   <div  class="flex flex-col gap-5 max-w-[650px] mt-5 sm:pl-5"> 
-    {educations.map(education =>
+    {educations.map((education : Education) =>
       <EducationItem
       title={education.title}
       place={education.place}

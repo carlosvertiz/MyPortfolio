@@ -1,40 +1,20 @@
 ---
 import ProjectItem from "./ProjectItem.astro";
-const {id} = Astro.props
-const projects = [
-  {
-    imagen: '/FreeShop.png',
-    url:"https://freeshoptribute.netlify.app/",
-    title: "FreeShop - eCommerce",
-    technologies: ["CSSIcon", "HTMLIcon", "ReactIcon", "NodeIcon", "JavaScriptIcon", "MySQLIcon"],
-  },
-  {
-    imagen: '/PersonalNotebook.png',
-    url: "https://thoughtnotebook.netlify.app/",
-    title: "Notebook",
-    technologies: ["CSSIcon", "HTMLIcon", "ReactIcon", "NodeIcon", "JavaScriptIcon", "MySQLIcon"],
-  },
-  {
-    imagen: '/GameRecomendation.png',
-    url: "https://github.com/carlosvertiz/Game-Recommendation-System/blob/main/GameRecomendations_on_Steam.ipynb",
-    title: "Game Recomendation System",
-    technologies: ["PythonIcon", "ScikitLearnIcon", "PandasIcon"],
-  },
-  {
-    imagen: '/PricesAnalysis.png',
-    url: "https://github.com/carlosvertiz/Supermarket_prices_DataAnalysis/blob/main/Supermarkets_comparitive_analysis.ipynb",
-    title: "Market Prices Analysis",
-    technologies: ["PythonIcon", "PandasIcon", "NumpyIcon"],
-  },
-]
+const {id, data, section} = Astro.props
+const projects = data.projects
 
+interface Projects {
+  imagen: string;
+  url: string;
+  title: string; 
+  technologies: Array<string>; 
+}
 ---
-<!-- bg-gray-950
- -->
+
 <section id={id} class="flex flex-col mx-1 sm:mx-5 items-center gap-5 mt-10 mb-10 max-w-screen-xl scroll-mt-20">
-  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">Projects</h2>
+  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">{section}</h2>
   <div class="flex flex-row flex-wrap justify-center mt-5 gap-10">
-    {projects.map(project =>
+    {projects.map((project : Projects) =>
     <ProjectItem 
       imagen = {project.imagen}
       url = {project.url}

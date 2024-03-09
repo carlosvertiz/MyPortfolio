@@ -2,6 +2,8 @@
 import GitHunIcon from '../svg/GitHubIcon.astro'
 import LinkedInIcon from '../svg/LinkedInIcon.astro'
 import {HeaderMenu} from './HeaderMenu.jsx'
+const {sections} = Astro.props
+
 ---
 
 
@@ -12,6 +14,7 @@ import {HeaderMenu} from './HeaderMenu.jsx'
               rounded-b-lg
               bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
               sm:justify-start sm:pr-8
+              z-10
               ">
   <nav class="flex gap-5 w-full items-center sm:justify-start ">
     <div class="flex flex-row gap-5">
@@ -23,12 +26,16 @@ import {HeaderMenu} from './HeaderMenu.jsx'
      </a>
     </div >
     <div class = "hidden sm:flex sm:flex-row  sm:gap-3">
-      <a class= " hover:text-indigo-800/80" href="#home">Home</a>
-      <a class= " hover:text-indigo-800/80" href="#experience">Experience</a>
-      <a class= " hover:text-indigo-800/80" href="#education">Education</a>
-      <a class= " hover:text-indigo-800/80" href="#skills">Skills</a>
-      <a class= " hover:text-indigo-800/80" href="#projects">Projects</a>
+      <a class= " hover:text-indigo-800/80" href="#home">{sections.Home}</a>
+      <div class="border-l border-indigo-800/80 my-1"></div>
+      <a class= " hover:text-indigo-800/80" href="#experience">{sections.Experience}</a>
+      <div class="border-l border-indigo-800/80 my-1"></div>
+      <a class= " hover:text-indigo-800/80" href="#education">{sections.Education}</a>
+      <div class="border-l border-indigo-800/80 my-1"></div>
+      <a class= " hover:text-indigo-800/80" href="#skills">{sections.Skills}</a>
+      <div class="border-l border-indigo-800/80 my-1"></div>
+      <a class= " hover:text-indigo-800/80" href="#projects">{sections.Projects}</a>
     </div>
-   <HeaderMenu  client:visible/>
+   <HeaderMenu sections ={sections} client:visible/>
   </nav>
 </header>

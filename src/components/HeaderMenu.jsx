@@ -1,8 +1,7 @@
 import { useState } from "react"
 import {MenuIcon} from "../svg/MenuIcon.jsx"
 
-
-export function HeaderMenu(){
+export function HeaderMenu({sections}){
   const [open, setOpen] = useState(false)
 
   function openMenu(){
@@ -15,11 +14,11 @@ export function HeaderMenu(){
       {open &&
         <div className =" flex flex-col gap-4 absolute top-6 right-0 p-5 bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]               
         border.solid border border-indigo-800/80 rounded-lg">
-          <a className= " hover:text-indigo-800/80" href="#home">Home</a>
-          <a className= " hover:text-indigo-800/80" href="#experience">Experience</a>
-          <a className= " hover:text-indigo-800/80" href="#education">Education</a>
-          <a class= " hover:text-indigo-800/80" href="#skills">Skills</a>
-          <a className= " hover:text-indigo-800/80" href="#projects">Projects</a>
+          <a className= " hover:text-indigo-800/80" href="#home">{sections.Home}</a>
+          <a className= " hover:text-indigo-800/80" href="#experience">{sections.Experience}</a>
+          <a className= " hover:text-indigo-800/80" href="#education">{sections.Education}</a>
+          <a className= " hover:text-indigo-800/80" href="#skills">{sections.Skills}</a>
+          <a className= " hover:text-indigo-800/80" href="#projects">{sections.Projects}</a>
         </div>
       } 
     </div>

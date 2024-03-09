@@ -1,42 +1,24 @@
 ---
+
 import ExperienceItem from "./ExperienceItem.astro";
-const {id} = Astro.props
 
-const experiences = [
-  {
-    title:"Product engineer",
-    company:"MECPARTS",
-    dateInt:"1/2022",
-    dateEnd:"12/2023",
-    tasks:["Development, design, improvement, and modification of products.",
-          "Program development and data analysis.",
-          "Development and design of tools and die for aluminum casting."]
-  },
-  {
-    title: "Economic feasibility study - Intern",
-    company: "Polo Tecnologico Constituyente S.A",
-    dateInt: "01/2021",
-    dateEnd: "04/2021",
-    tasks:["Data acquisition, storage and analysis",
-          "Canvas Business Model"]
-  },
-  {
-    title:"Extracurricular Practise",
-    company: "Instituto de fisica del Litorial",
-    dateInt: "01/2019",
-    dateEnd: "01/2020",
-    tasks:["Application development using Python, C++ and TCL",
-          "Molecular dynamic simulations"]
-  }
-  ]
+const {id, data, section} = Astro.props
+const experiences = data.experiences
 
+interface Experience {
+  title: string;
+  company: string;
+  dateInt: string; 
+  dateEnd: string; 
+  tasks: Array<string>
+}
 
 ---
 
 <section id = {id} class="flex flex-col mx-5 items-center gap-5 mt-20 mb-10 max-w-screen-2xl sm:items-start scroll-mt-20 " >
-  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full  border-dashed border border-indigo-500/30">Experience</h2>
+  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full  border-dashed border border-indigo-500/30">{section}</h2>
   <div class="flex flex-col  gap-5 mt-5 sm:pl-5">
-    {experiences.map(experience =>
+    {experiences.map((experience:Experience) =>
       <ExperienceItem
       title={experience.title}
       company={experience.company}

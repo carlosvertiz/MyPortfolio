@@ -1,29 +1,13 @@
 ---
-import {iconMap } from '../templates/iconTypes';
-const {id} = Astro.props
- 
-const skills = [
-  "JavaScriptIcon",
-  "PythonIcon", 
-  "HTMLIcon", 
-  "CSSIcon", 
-  "TailWindIcon", 
-  "GitHubIcon", 
-  "MySQLIcon",
-  "NodeIcon", 
-  "ReactIcon",
-  "AstroIcon",
-  "ScikitLearnIcon",
-  "PandasIcon",
-  "NumpyIcon",
-]
+import {iconMap } from '../templates/iconTypes'
+const {id, data, section} = Astro.props
+const skills = data.skills
 ---
 
-
 <section id={id} class="flex flex-col mx-5 items-center gap-5 mt-10 mb-10 max-w-screen-xl scroll-mt-20">
-  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">Skills</h2>
+  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">{section}</h2>
   <div  class="flex flex-row flex-wrap items-center justify-center gap-5 mt-1 sm:mt-5"> 
-    {skills.map(skill =>
+    {skills.map((skill : string)  =>
       {
         const IconComponent = iconMap[skill]
         return (
