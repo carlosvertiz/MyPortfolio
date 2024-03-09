@@ -1,22 +1,58 @@
 ---
+import AstroIcon from "../svg/AstroIcon.astro";
+import CSSIcon from "../svg/CSSIcon.astro";
+import HTMLIcon from "../svg/HTMLIcon.astro";
+import JavaScriptIcon from "../svg/JavaScriptIcon.astro";
+import MySQLIcon from "../svg/MySQLIcon.astro";
+import NodeIcon from "../svg/NodeIcon.astro";
+import PythonIcon from "../svg/PythonIcon.astro";
+import ReactIcon from "../svg/ReactIcon.astro";
+
 interface Props {
   imagen: string,
 	url: string;
   title: string;
-  technologies: Array<string>;
+  technologies: Array<any>;
+
 }
+
+type IconType = typeof AstroIcon | 
+                typeof CSSIcon | 
+                typeof HTMLIcon | 
+                typeof JavaScriptIcon |
+                typeof MySQLIcon |
+                typeof NodeIcon | 
+                typeof PythonIcon | 
+                typeof ReactIcon;
+
+const iconMap: Record<string, IconType> = {
+  "AstroIcon": AstroIcon,
+  "CSSIcon": CSSIcon,
+  "HTMLIcon": HTMLIcon,
+  "JavaScriptIcon": JavaScriptIcon,
+  "MySQLIcon": MySQLIcon,
+  "NodeIcon": NodeIcon,
+  "PythonIcon": PythonIcon,
+  "ReactIcon": ReactIcon,
+};
 
 const { imagen, url, title, technologies } = Astro.props;
 ---
 
-
-<a class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]" href={url} target="_blank">
-  <img src = {imagen} alt = `${title} imagen`/>
-  <h4>{title}</h4>
-  <div>
+<a class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
+border.solid border border-indigo-800/80
+flex flex-col  items-center  
+min-h-[220px] px-4 py-5 mx-5 rounded-3xl
+transition-transform duration-300 sm:hover:scale-110" 
+href={url} target="_blank" rel="noreferrer">
+<h4 class="text-center mb-2">{title}</h4>
+  <img class=" w-72 aspect-video rounded-3xl mb-2" src = {imagen} alt = `${title} imagen`/>
+  <div class="flex flex-row justify-center mt-1 rounded-3xl gap-2">
     {technologies.map(technology =>
-    <{technology} />
-      
+      {
+        const IconComponent = iconMap[technology]
+        return <IconComponent alt={technology} class="w-7 h-7 sm:w-9 sm:h-9"/>
+      }
     )}
   </div>
 </a>

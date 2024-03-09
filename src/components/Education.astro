@@ -1,5 +1,6 @@
 ---
 import EducationItem from "./EducationItem.astro"
+const {id} = Astro.props
 
 const educations = [
   {
@@ -15,7 +16,7 @@ const educations = [
     dateEnd: "",
   },
   {
-    title:"Google Advencaed Data Analytics Professional Certificate",
+    title:"Google Advanced Data Analytics Professional Certificate",
     place: "Coursera",
     dateInt: "2023",
     dateEnd: "",
@@ -32,15 +33,16 @@ const educations = [
 
 ---
 
-<section class="flex flex-col gap-5 mx-5 mt-10 ">
-  <h2 class="bg-gray-950 p-3 rounded-2xl text-center">Education</h2>
-  {educations.map(education =>
-    <EducationItem
-    title={education.title}
-    place={education.place}
-    dateInt={education.dateInt}
-    dateEnd={education.dateEnd}
-  />
-  )}
-
+<section id={id} class="flex flex-col mx-5 items-center gap-5 mt-20 max-w-screen-2xl sm:items-start scroll-mt-20">
+  <h2 class="bg-gray-950  p-3 rounded-full px-20 sm:mr-auto">Education</h2>
+  <div  class="flex flex-col  gap-5 max-w-[650px]"> 
+    {educations.map(education =>
+      <EducationItem
+      title={education.title}
+      place={education.place}
+      dateInt={education.dateInt}
+      dateEnd={education.dateEnd}
+    />
+    )}
+  </div>
 </section>

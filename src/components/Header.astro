@@ -1,15 +1,33 @@
-<header class="flex justify-center
-              text-xs py-2 px-3 
-              border.solid border border-indigo-800/80
+---
+import GitHunIcon from '../svg/GitHubIcon.astro'
+import LinkedInIcon from '../svg/LinkedInIcon.astro'
+import {HeaderMenu} from './HeaderMenu.jsx'
+---
+
+
+
+<header class="flex sticky top-0
+              text-xs w-screen py-2 px-5 
+              border.solid border border-indigo-800/80 border-t-0
               rounded-b-lg
-              bg-[#000000]
-              bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
+              bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
+              sm:justify-start sm:pr-8
               ">
-  <nav class="flex justify-around gap-3 text-[0.6rem]">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/experience">Experience</a>
-    <a href="/education">Education</a>
-    <a href="/projects">Projects</a>
+  <nav class="flex gap-5 w-full items-center sm:justify-start ">
+    <div class="flex flex-row gap-5">
+      <a class= "self-start" href="https://github.com/carlosvertiz" target="_blank" rel="noreferrer">
+        <GitHunIcon class = "h-8 w-8"/>
+      </a>
+      <a class= "self-start" href="https://www.linkedin.com/in/carlosvertiz/" target="_blank" rel="noreferrer">
+        <LinkedInIcon class = "h-8 w-8" />
+     </a>
+    </div >
+    <div class = "hidden sm:flex sm:flex-row  sm:gap-3">
+      <a class= " hover:text-indigo-800/80" href="#home">Home</a>
+      <a class= " hover:text-indigo-800/80" href="#experience">Experience</a>
+      <a class= " hover:text-indigo-800/80" href="#education">Education</a>
+      <a class= " hover:text-indigo-800/80" href="#projects">Projects</a>
+    </div>
+   <HeaderMenu  client:visible/>
   </nav>
 </header>

@@ -1,5 +1,6 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+const {id} = Astro.props
 
 const experiences = [
   {
@@ -32,17 +33,18 @@ const experiences = [
 
 ---
 
-<section class="flex flex-col gap-5 mx-5 mt-20 ">
-  <h2 class="bg-gray-950 p-3 rounded-2xl text-center">Experience</h2>
-  {experiences.map(experience =>
-    <ExperienceItem
-    title={experience.title}
-    company={experience.company}
-    dateInt={experience.dateInt}
-    dateEnd={experience.dateEnd}
-    tasks={experience.tasks}
-  />
-  
-  )}
+<section id = {id} class="flex flex-col mx-5 items-center gap-5 mt-20 max-w-screen-2xl sm:items-start scroll-mt-20" >
+  <h2 class="bg-gray-950  p-3 rounded-full px-20 sm:mr-auto scroll-mt-20">Experience</h2>
+  <div class="flex flex-col  gap-5 ">
+    {experiences.map(experience =>
+      <ExperienceItem
+      title={experience.title}
+      company={experience.company}
+      dateInt={experience.dateInt}
+      dateEnd={experience.dateEnd}
+      tasks={experience.tasks}
+    />
+    )}
+  </div>
 
 </section>

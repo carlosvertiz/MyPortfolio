@@ -1,14 +1,31 @@
-<section>
-  <div class="flex flex-col m-5  items-center justify-center my-20 bg-gray-950 py-5 rounded-full">
+---
+const {id} = Astro.props
+
+---
+
+
+<section id = {id} class="flex flex-col items-center ">
+  <div class="flex flex-col items-center text-center justify-center
+              w-fit px-12 sm:px-30 md:px-40 lg:px-50 xl:px-60 my-20 
+              bg-gray-950 py-5 rounded-full">
     <h1>Carlos Vertiz</h1>
     <h2>Full Stack Developer</h2> 
   </div>
-  <div class="flex flex-col gap-6 m-5 items-center">
-    <picture class="px-10">
-      <img class="rounded-full aspect-square" src = '../imagens/myimagen.jpeg' alt="My photo">
+  <article class="flex flex-col items-center  gap-8 
+                  max-w-5xl  hit-fit p-5 m-10 rounded-3xl
+                  border.solid border border-indigo-800/80
+                  bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]                  
+                  md:flex-row md:px-10 md:gap-1 md:py-2 md:rounded-full
+                  ">
+
+    <picture class="px-10 max-w-md min-w-48 md:my-5" >
+      <img class="rounded-full aspect-square " src = '/myimagen.jpeg' alt="My photo">
     </picture>
-    <p class="text-pretty my-20bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]"> 
+    
+    <p class="text-pretty max-w-lg text-center md:text-left"> 
       Como ingeniero con amplios conocimientos informáticos, estoy constantemente inmerso en el aprendizaje y la formación en nuevas tecnologías. Mi experiencia abarca proyectos tanto propios como de terceros, donde he utilizado una amplia gama de herramientas, incluyendo <strong>JavaScript, Python y SQL </strong>, entre otras.
     </p>
-  </div>
+  </article>
 </section>
+
+

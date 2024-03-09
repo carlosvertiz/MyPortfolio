@@ -1,40 +1,33 @@
 ---
 import ProjectItem from "./ProjectItem.astro";
-
-import AstroIcon from "../svg/AstroIcon.astro";
-import CSSIcon from "../svg/CSSIcon.astro";
-import JavaScriptIcon from "../svg/JavaScriptIcon.astro";
-import NodeIcon from "../svg/NodeIcon.astro";
-import PythonIcon from "../svg/PythonIcon.astro";
-import ReactIcon from '../svg/ReactIcon.svg'
-
-
+const {id} = Astro.props
 const projects = [
   {
-    imagen:,
-    url:,
-    title:,
-    technologies:,
+    imagen: '/FreeShop.png',
+    url:"https://freeshoptribute.netlify.app/",
+    title: "FreeShop - eCommerce",
+    technologies: ["CSSIcon", "HTMLIcon", "ReactIcon", "NodeIcon", "JavaScriptIcon", "MySQLIcon"],
   },
   {
-    imagen:,
-    url:,
-    title:,
-    technologies:,
+    imagen: '/PersonalNotebook.png',
+    url: "https://thoughtnotebook.netlify.app/",
+    title: "Notebook",
+    technologies: ["CSSIcon", "HTMLIcon", "ReactIcon", "NodeIcon", "JavaScriptIcon", "MySQLIcon"],
   },
 ]
 
 ---
-
-
-
-<section>
-  {projects.map(project =>
-  < ProjectItem 
-    imagen = {project.imagen}
-    url = {project.url}
-    title = {project.title}
-    technologies = {project.technologies}
-  />
-  )}
+<!-- bg-gray-950
+ -->
+<section id={id} class="flex flex-col mx-5 items-center gap-5 mt-20 max-w-screen-2xl scroll-mt-20">
+  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full">Projects</h2>
+  <div class="flex flex-row flex-wrap  justify-center mt-10 gap-10">
+    {projects.map(project =>
+    <ProjectItem 
+      imagen = {project.imagen}
+      url = {project.url}
+      title = {project.title}
+      technologies = {project.technologies} />
+    )}
+  </div>
 </section>

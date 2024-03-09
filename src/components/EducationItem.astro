@@ -10,7 +10,8 @@ const { title, place, dateInt, dateEnd } = Astro.props;
 ---
 
 
-<article class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]">
+<article class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] border.solid border border-indigo-800/80
+ w-full pl-5 py-2 pr-10 rounded-3xl">
   <h3>{title}</h3>
-  <h4>{place} | {dateInt} {dateEnd? `- ${dateEnd}` : ""}</h4>
+  <p>{place} | {dateInt} {dateEnd? `- ${dateEnd}` : ""}</p>
 </article>
