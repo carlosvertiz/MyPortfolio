@@ -14,14 +14,26 @@ const projects = [
     title: "Notebook",
     technologies: ["CSSIcon", "HTMLIcon", "ReactIcon", "NodeIcon", "JavaScriptIcon", "MySQLIcon"],
   },
+  {
+    imagen: '/GameRecomendation.png',
+    url: "https://github.com/carlosvertiz/Game-Recommendation-System/blob/main/GameRecomendations_on_Steam.ipynb",
+    title: "Game Recomendation System",
+    technologies: ["PythonIcon", "ScikitLearnIcon", "PandasIcon"],
+  },
+  {
+    imagen: '/PricesAnalysis.png',
+    url: "https://github.com/carlosvertiz/Supermarket_prices_DataAnalysis/blob/main/Supermarkets_comparitive_analysis.ipynb",
+    title: "Market Prices Analysis",
+    technologies: ["PythonIcon", "PandasIcon", "NumpyIcon"],
+  },
 ]
 
 ---
 <!-- bg-gray-950
  -->
-<section id={id} class="flex flex-col mx-5 items-center gap-5 mt-20 max-w-screen-2xl scroll-mt-20">
-  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full">Projects</h2>
-  <div class="flex flex-row flex-wrap  justify-center mt-10 gap-10">
+<section id={id} class="flex flex-col mx-1 sm:mx-5 items-center gap-5 mt-10 mb-10 max-w-screen-xl scroll-mt-20">
+  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">Projects</h2>
+  <div class="flex flex-row flex-wrap justify-center mt-5 gap-10">
     {projects.map(project =>
     <ProjectItem 
       imagen = {project.imagen}

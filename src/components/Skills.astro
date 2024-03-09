@@ -1,0 +1,35 @@
+---
+import {iconMap } from '../templates/iconTypes';
+const {id} = Astro.props
+ 
+const skills = [
+  "JavaScriptIcon",
+  "PythonIcon", 
+  "HTMLIcon", 
+  "CSSIcon", 
+  "MySQLIcon",
+  "NodeIcon", 
+  "ReactIcon",
+  "AstroIcon",
+  "ScikitLearnIcon",
+  "PandasIcon",
+  "NumpyIcon",
+]
+---
+
+
+<section id={id} class="flex flex-col mx-5 items-center gap-5 mt-10 mb-10 max-w-screen-xl scroll-mt-20">
+  <h2 class="bg-gray-950 py-3 text-center rounded-3xl w-full border-dashed border border-indigo-500/30">Skills</h2>
+  <div  class="flex flex-row flex-wrap items-center gap-5 mt-5"> 
+    {skills.map(skill =>
+      {
+        const IconComponent = iconMap[skill]
+        return (
+          <div class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] p-2 border-solid border border-indigo-800/80 rounded-full">
+            <IconComponent  class="size-8 sm:size-10"/>
+          </div>
+        )
+      }
+    )}
+  </div>
+</section>

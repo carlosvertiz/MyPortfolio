@@ -18,6 +18,7 @@ export function HeaderMenu(){
           <a className= " hover:text-indigo-800/80" href="#home">Home</a>
           <a className= " hover:text-indigo-800/80" href="#experience">Experience</a>
           <a className= " hover:text-indigo-800/80" href="#education">Education</a>
+          <a class= " hover:text-indigo-800/80" href="#skills">Skills</a>
           <a className= " hover:text-indigo-800/80" href="#projects">Projects</a>
         </div>
       } 
