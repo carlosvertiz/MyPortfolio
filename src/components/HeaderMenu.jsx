@@ -13,7 +13,7 @@ export function HeaderMenu(){
     <div onClick = {openMenu} className="flex flex-col gap-1 relative ml-auto sm:hidden " >
       <MenuIcon   props = "size-5 cursor-pointer" />
       {open &&
-        <div className =" flex flex-col gap-1 absolute top-6 right-0 p-5 bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]               
+        <div className =" flex flex-col gap-2 absolute top-6 right-0 p-5 bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]               
         border.solid border border-indigo-800/80 rounded-lg">
           <a className= " hover:text-indigo-800/80" href="#home">Home</a>
           <a className= " hover:text-indigo-800/80" href="#experience">Experience</a>
