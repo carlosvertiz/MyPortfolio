@@ -1,5 +1,6 @@
 import AstroIcon from "../svg/AstroIcon.astro";
 import CSSIcon from "../svg/CSSIcon.astro";
+import GitHubIcon from "../svg/GitHubIcon.astro";
 import HTMLIcon from "../svg/HTMLIcon.astro";
 import JavaScriptIcon from "../svg/JavaScriptIcon.astro";
 import MySQLIcon from "../svg/MySQLIcon.astro";
@@ -9,6 +10,8 @@ import ReactIcon from "../svg/ReactIcon.astro";
 import ScikitLearnIcon from '../svg/ScikitLearnIcon.astro'
 import PandasIcon from '../svg/PandasIcon.astro'
 import NumpyIcon from '../svg/NumpyIcon.astro'
+import TailWindIcon from "../svg/TailWindIcon.astro";
+
 
 type IconType = typeof AstroIcon | 
                 typeof CSSIcon | 
@@ -20,7 +23,9 @@ type IconType = typeof AstroIcon |
                 typeof ReactIcon |
                 typeof ScikitLearnIcon |
                 typeof PandasIcon |
-                typeof NumpyIcon;
+                typeof NumpyIcon |
+                typeof GitHubIcon |
+                typeof TailWindIcon
 
 
 const iconMap: Record<string, IconType> = {
@@ -34,7 +39,9 @@ const iconMap: Record<string, IconType> = {
   "ReactIcon": ReactIcon,
   "ScikitLearnIcon": ScikitLearnIcon,
   "PandasIcon": PandasIcon,
-  "NumpyIcon" : NumpyIcon
+  "NumpyIcon" : NumpyIcon,
+  "GitHubIcon" : GitHubIcon,
+  "TailWindIcon" : TailWindIcon,
 };
 
 export {iconMap };
