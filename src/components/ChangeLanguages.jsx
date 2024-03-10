@@ -1,6 +1,7 @@
 
 export function ChangeLanguages() {
   const currentPath = window.location.pathname;
+  console.log(currentPath)
 
   return (
     <div className="flex flex-row gap-4 px-4 py-1 w-fit mt-2 ml-6 border-solid border border-indigo-800/80 rounded-xl lg:mt-5">
