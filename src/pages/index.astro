@@ -11,7 +11,8 @@ import {ChangeLanguages} from '../components/ChangeLanguages.jsx'
 ---
 
 <Layout sections = {sections} title="Portfolio Carlos Vertiz, developer and programmer">
-	<main class="flex flex-col max-w-7xl">
+	<main 
+		class="flex flex-col max-w-7xl">
 		<ChangeLanguages client:only/>
 		<AboutMe  data={data} id="home" />
 		<Experience section = {sections.Experience} data={data} id="experience" />
