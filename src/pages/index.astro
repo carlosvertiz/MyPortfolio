@@ -7,12 +7,11 @@ import Projects from '../components/Projects.astro'
 import Skills from '../components/Skills.astro'
 import {data, sections} from '../Languages/DataEn.js'
 import {ChangeLanguages} from '../components/ChangeLanguages.jsx'
-
+import {Contact} from '../components/Contact.jsx'
 ---
 
 <Layout sections = {sections} title="Portfolio Carlos Vertiz, developer and programmer">
-	<main 
-		class="flex flex-col max-w-7xl">
+	<main class="flex flex-col max-w-7xl relative">
 		<ChangeLanguages client:only/>
 		<AboutMe  data={data} id="home" />
 		<Experience section = {sections.Experience} data={data} id="experience" />
@@ -20,4 +19,5 @@ import {ChangeLanguages} from '../components/ChangeLanguages.jsx'
 		<Skills section = {sections.Skills} data={data} id="skills" />
 		<Projects section = {sections.Projects} data={data} id="projects" />
 	</main>
+	<Contact  section={sections.ContactMe} email={data.email} client:visible/>
 </Layout>

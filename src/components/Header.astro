@@ -1,26 +1,23 @@
 ---
-import GitHunIcon from '../svg/GitHubIcon.astro'
-import LinkedInIcon from '../svg/LinkedInIcon.astro'
+import CVIcon from '../svg/CVIcon.astro'
+
 import {HeaderMenu} from './HeaderMenu.jsx'
 const {sections} = Astro.props
 
 ---
 
 <header class="flex sticky top-0
-              text-xs w-screen py-2 px-5 
+              text-xs  py-2 px-5 w-full
               border.solid border border-indigo-800/80 border-t-0
-              rounded-b-lg
+              rounded-b-lg 
               bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
               sm:justify-start sm:pr-8
               z-10
               ">
   <nav class="flex gap-5 w-full items-center sm:justify-start ">
-    <div class="flex flex-row gap-5">
-      <a class= "self-start" href="https://github.com/carlosvertiz" target="_blank" rel="noreferrer">
-        <GitHunIcon class = "h-8 w-8"/>
-      </a>
-      <a class= "self-start" href="https://www.linkedin.com/in/carlosvertiz/" target="_blank" rel="noreferrer">
-        <LinkedInIcon class = "h-8 w-8" />
+    <div class="flex flex-row gap-5 items-center">
+      <CVIcon />
+
      </a>
     </div >
     <div class = "hidden sm:flex sm:flex-row  sm:gap-3">

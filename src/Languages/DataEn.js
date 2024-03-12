@@ -4,10 +4,11 @@ export const sections = {
   Education: "Education",
   Skills: "Skills",
   Projects: "Projects",
+  ContactMe: "Contact",
 }
 
 export const data = {
-
+  email:"vertizcar@gmail.com",
   personalIformation : 
   {
     name: "Carlos Vertiz",
