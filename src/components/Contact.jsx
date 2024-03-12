@@ -15,6 +15,11 @@ export function Contact({section, email}){
     setVisible(false)
   }
 
+  function clickMenu(){
+    const value = !visible
+    setVisible(value)
+  }
+
 
   return (
     <section 
@@ -37,8 +42,9 @@ export function Contact({section, email}){
       
       <div 
         className="flex self-end items-center h-fit mt-2 w-fit bg-gray-950 border-dashed border border-indigo-500/30 rounded-full" 
-        onMouseEnter={openMenu}>
-        <p className=" p-3 text-center rounded-3xl w-full text-sky-500" >{section}</p>
+        onMouseEnter={openMenu}
+        onClick={clickMenu}>
+        <p className=" p-3 text-center rounded-3xl w-full text-sky-500 select-none	" >{section}</p>
       </div>
     </section>
   )
