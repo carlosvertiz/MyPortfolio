@@ -23,7 +23,7 @@ export function Contact({section, email}){
 
   return (
     <section 
-      className='flex flex-col self-end gap-2 fixed bottom-[10%] right-[5%] md:bottom-[10%] md:right-[5%] w-fit'
+      className='flex flex-col self-end gap-2 fixed bottom-[10%] right-[5%] md:bottom-[10%] md:right-[5%] w-fit z-50'
       onMouseLeave={closeMenu}>
 
       <fragment  className={`flex flex-col items-end justify-center gap-3 pr-5 transition-opacity duration-300 ${visible? "opacity-1" : "opacity-0 invisible"}`}> 

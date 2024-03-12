@@ -11,6 +11,7 @@ import {Contact} from '../components/Contact.jsx'
 ---
 
 <Layout sections = {sections} title="Portfolio Carlos Vertiz, developer and programmer">
+	<Contact  section={sections.ContactMe} email={data.email} client:visible/>
 	<main class="flex flex-col max-w-7xl relative">
 		<ChangeLanguages client:only/>
 		<AboutMe  data={data} id="home" />
@@ -19,5 +20,4 @@ import {Contact} from '../components/Contact.jsx'
 		<Skills section = {sections.Skills} data={data} id="skills" />
 		<Projects section = {sections.Projects} data={data} id="projects" />
 	</main>
-	<Contact  section={sections.ContactMe} email={data.email} client:visible/>
 </Layout>
