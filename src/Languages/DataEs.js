@@ -96,24 +96,31 @@ export const data = {
       url:"https://freeshoptribute.netlify.app/",
       title: "FreeShop - comercio virtual",
       technologies: ["CSSIcon", "HTMLIcon", "ReactIcon", "NodeIcon", "JavaScriptIcon", "MySQLIcon"],
+      links:[
+        {name:"Frontend", link:"https://github.com/carlosvertiz/FreeShop-Frontend"},
+        {name:"Backend", link:"https://github.com/carlosvertiz/FreeShop-Backend"},
+       ],
     },
     {
       imagen: '/PersonalNotebook.png',
       url: "https://thoughtnotebook.netlify.app/",
       title: "Notebook",
       technologies: ["CSSIcon", "HTMLIcon", "ReactIcon", "NodeIcon", "JavaScriptIcon", "MySQLIcon"],
+      links:[{name:"Frontend", link:"https://github.com/carlosvertiz/ThoughtPage-Frontend"},{name:"Backend", link:"https://github.com/carlosvertiz/ThoughtPage-Backend"}],
     },
     {
       imagen: '/GameRecomendation.png',
       url: "https://github.com/carlosvertiz/Game-Recommendation-System/blob/main/GameRecomendations_on_Steam.ipynb",
       title: "Sistema de recomendación de juegos",
       technologies: ["PythonIcon", "ScikitLearnIcon", "PandasIcon"],
+      links:[{name:"Code", link:"https://github.com/carlosvertiz/Game-Recommendation-System"}],
     },
     {
       imagen: '/PricesAnalysis.png',
       url: "https://github.com/carlosvertiz/Supermarket_prices_DataAnalysis/blob/main/Supermarkets_comparitive_analysis.ipynb",
       title: "An{alisis de precios",
       technologies: ["PythonIcon", "PandasIcon", "NumpyIcon"],
+      links:[{name:"Code", link:"https://github.com/carlosvertiz/Supermarket_prices_DataAnalysis"}]
     },
   ],
 

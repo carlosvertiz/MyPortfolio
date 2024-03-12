@@ -1,24 +1,36 @@
 ---
 import {iconMap } from '../templates/iconTypes';
+import {LinksProject} from './LinksProject.jsx'
 
 interface Props {
   imagen: string,
 	url: string;
   title: string;
   technologies: Array<any>;
-
+  links: Array<any>
 }
 
-const { imagen, url, title, technologies } = Astro.props;
+const { imagen, url, title, technologies, links } = Astro.props;
 ---
 
+<div class="flex flex-col h-fit gap-1">
+ <div class="flex flex-row gap-3 pl-10">
+    {links.map((link) =>
+      (
+      
+        <a class="h-fit px-3 py-1 bg-gray-950 border-dashed border border-indigo-800/80 rounded-full transition-transform duration-300 sm:hover:scale-110" href={link.link} target="_blank" rel="noreferrer">
+          {link.name}
+        </a>
+      )
+      )}
+  </div>
 <a class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
-border.solid border border-indigo-800/80
-flex flex-col  items-center  
+border-solid border border-indigo-800/80
+flex flex-col  items-center   relative
 min-h-[220px] px-4 py-5 mx-5 rounded-3xl
 transition-transform duration-300 sm:hover:scale-110" 
 href={url} target="_blank" rel="noreferrer">
-<h4 class="text-center mb-2">{title}</h4>
+  <h4 class="text-center mb-2">{title}</h4>
   <img class=" w-72 aspect-video rounded-3xl mb-2" src = {imagen} alt = `${title} imagen`/>
   <div class="flex flex-row justify-center mt-1 rounded-3xl gap-2">
     {technologies.map(technology =>
@@ -29,3 +41,4 @@ href={url} target="_blank" rel="noreferrer">
     )}
   </div>
 </a>
+</div>

@@ -23,7 +23,7 @@ export function Contact({section, email}){
 
   return (
     <section 
-      className='flex flex-col self-end gap-2 sticky bottom-[2%] right-[5%] md:bottom-[5%] md:right-[5%] w-fit'
+      className='flex flex-col self-end gap-2 fixed bottom-[10%] right-[5%] md:bottom-[10%] md:right-[5%] w-fit'
       onMouseLeave={closeMenu}>
 
       <fragment  className={`flex flex-col items-end justify-center gap-3 pr-5 transition-opacity duration-300 ${visible? "opacity-1" : "opacity-0 invisible"}`}> 
@@ -41,7 +41,7 @@ export function Contact({section, email}){
       </fragment>
       
       <div 
-        className="flex self-end items-center h-fit mt-2 w-fit bg-gray-950 border-dashed border border-indigo-500/30 rounded-full" 
+        className="flex self-end items-center h-fit mt-2 w-fit bg-gray-950 border-dashed border border-sky-500 rounded-full" 
         onMouseEnter={openMenu}
         onClick={clickMenu}>
         <p className=" p-3 text-center rounded-3xl w-full text-sky-500 select-none	" >{section}</p>
