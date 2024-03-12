@@ -1,5 +1,3 @@
-import JavaScriptIcon from "../svg/JavaScriptIcon.astro"
-
 export const sections = {
   Home: "Home",
   Experience: "Experiencia",
