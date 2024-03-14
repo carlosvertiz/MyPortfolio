@@ -13,7 +13,7 @@ export const data = {
   {
     name: "Carlos Vertiz",
     profesion: "Programador Full Stack",
-    aboutMe: "Soy un ingeniero con amplio conocimiento informático. Estoy constantemente profundizando mis conocimientos y aprendiendo nuevas tecnologías. Mi experiencia abarca desde proyectos personales hasta proyectos de terceros, donde he utilizado una gran variedad de herramientas, incluyendo JavaScript, Python y MySQL.",
+    aboutMe: `Soy un ingeniero con amplio conocimiento informático. Estoy constantemente profundizando mis conocimientos y aprendiendo nuevas tecnologías. Mi experiencia abarca desde proyectos personales hasta proyectos de terceros, donde he utilizado una gran variedad de herramientas, incluyendo JavaScript, Python y MySQL.`,
     photo: "/myimagen.jpeg"
   },
 
@@ -118,7 +118,7 @@ export const data = {
     {
       imagen: '/PricesAnalysis.png',
       url: "https://github.com/carlosvertiz/Supermarket_prices_DataAnalysis/blob/main/Supermarkets_comparitive_analysis.ipynb",
-      title: "An{alisis de precios",
+      title: "Análisis de precios de mercado",
       technologies: ["PythonIcon", "PandasIcon", "NumpyIcon"],
       links:[{name:"Code", link:"https://github.com/carlosvertiz/Supermarket_prices_DataAnalysis"}]
     },

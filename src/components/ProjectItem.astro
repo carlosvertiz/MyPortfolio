@@ -13,8 +13,8 @@ interface Props {
 const { imagen, url, title, technologies, links } = Astro.props;
 ---
 
-<div class="flex flex-col h-fit gap-1">
- <div class="flex flex-row gap-3 pl-10">
+<div class="flex flex-col h-fit gap-2">
+ <div class="flex flex-row gap-3 pl-8">
     {links.map((link) =>
       (
       
@@ -24,21 +24,21 @@ const { imagen, url, title, technologies, links } = Astro.props;
       )
       )}
   </div>
-<a class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
-border-solid border border-indigo-800/80
-flex flex-col  items-center   relative
-min-h-[220px] px-4 py-5 mx-5 rounded-3xl
-transition-transform duration-300 sm:hover:scale-110" 
-href={url} target="_blank" rel="noreferrer">
-  <h4 class="text-center mb-2">{title}</h4>
-  <img class=" w-72 aspect-video rounded-3xl mb-2" src = {imagen} alt = `${title} imagen`/>
-  <div class="flex flex-row justify-center mt-1 rounded-3xl gap-2">
-    {technologies.map(technology =>
-      {
-        const IconComponent = iconMap[technology]
-        return <IconComponent class="w-7 h-7 sm:w-9 sm:h-9"/>
-      }
-    )}
-  </div>
-</a>
+  <a class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
+  border-solid border border-indigo-800/80
+  flex flex-col  items-center   relative
+  min-h-[220px] px-4 py-5 mx-5 rounded-3xl
+  transition-transform duration-300 sm:hover:scale-105" 
+  href={url} target="_blank" rel="noreferrer">
+    <h4 class="text-center mb-2">{title}</h4>
+    <img class=" w-72 aspect-video rounded-3xl mb-2" src = {imagen} alt = `${title} imagen`/>
+    <div class="flex flex-row justify-center mt-1 rounded-3xl gap-2">
+      {technologies.map(technology =>
+        {
+          const IconComponent = iconMap[technology]
+          return <IconComponent class="w-7 h-7 sm:w-9 sm:h-9"/>
+        }
+      )}
+    </div>
+  </a>
 </div>
